@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension View {
-    func parallax(amount: CGFloat = 10) -> some View {
+    public func parallax(amount: CGFloat = 10) -> some View {
         ParallaxView(view: AnyView(self), amount: amount)
     }
 }
