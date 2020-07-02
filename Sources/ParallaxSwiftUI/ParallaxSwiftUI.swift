@@ -65,7 +65,7 @@ struct ParallaxView: View {
     var body: some View {
         /// Using geometry reader we can get the proposed width and height of the view normally. Then we can pass that to the view controller.
         GeometryReader { geometry in
-            ParallaxRepresentable(view: view, width: geometry.size.width, height: geometry.size.height, minHorizontal: minHorizontal, maxHorizontal: maxHorizontal, minVertical: minVertical, maxVertical: maxVertical, direction: direction)
+            ParallaxRepresentable(view: view, width: geometry.frame(in: .local).size.width, height: geometry.frame(in: .local).size.height, minHorizontal: minHorizontal, maxHorizontal: maxHorizontal, minVertical: minVertical, maxVertical: maxVertical, direction: direction)
         }
     }
 }
