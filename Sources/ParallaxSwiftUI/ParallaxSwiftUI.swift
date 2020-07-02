@@ -82,6 +82,8 @@ struct ParallaxRepresentable: UIViewControllerRepresentable {
     
     let minVertical: CGFloat
     let maxVertical: CGFloat
+    
+    let direction: ParallaxDirection
 
     func makeUIViewController(context: Context) -> ParallaxController {
         
@@ -96,6 +98,8 @@ struct ParallaxRepresentable: UIViewControllerRepresentable {
         controller.maxHorizontal = maxHorizontal
         controller.minVertical = minVertical
         controller.maxVertical = maxVertical
+        
+        controller.direction = direction
         
         controller.viewToChange = hostingController
         
@@ -121,6 +125,8 @@ class ParallaxController: UIViewController {
     
     var minVertical: CGFloat = -10
     var maxVertical: CGFloat = 10
+    
+    var direction: ParallaxDirection = .both
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,7 +161,14 @@ class ParallaxController: UIViewController {
         vertical.minimumRelativeValue = minVertical
         vertical.maximumRelativeValue = maxVertical
 
-        group.motionEffects = [horizontal, vertical]
+        if direction == .horizontal {
+            group.motionEffects = [horizontal]
+        } else if direction == .vertical {
+            group.motionEffects = [vertical]
+        } else {
+            group.motionEffects = [horizontal, vertical]
+        }
+        
         viewToChange!.view.addMotionEffect(group)
     }
 
