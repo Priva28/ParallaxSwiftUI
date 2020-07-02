@@ -64,6 +64,8 @@ Like this:
 
 Here is a cool button I made:
 
+![preview](https://github.com/Priva28/ParallaxSwiftUI/blob/main/preview.gif)
+
 ```
 import SwiftUI
 import ParallaxSwiftUI
