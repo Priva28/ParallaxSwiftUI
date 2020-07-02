@@ -1,6 +1,6 @@
 # ParallaxSwiftUI
 
-Add some depth to your SwiftUI interface with ParallaxSwiftUI. 
+Add some depth to your SwiftUI interface with ParallaxSwiftUI. It uses motion and your devices sensors to create a parallax effect. 
 It's super easy to use and customise.
 
 ## Installation
