@@ -38,7 +38,7 @@ The default is 10 and the amount will change the amount in pixels that the view 
 
 `.parallax(minHorizontal: -20, maxHorizontal: 20, minVertical: -5, maxVertical: 5)`
 
-This code above will make is so the view can move 20 pixels left and right and 5 up and down.
+This code above will make it so the view can move 20 pixels left and right and 5 up and down.
 
 **Complete examples:**
 
