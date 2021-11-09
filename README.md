@@ -42,7 +42,7 @@ The default is 10 and the amount will change the amount in pixels that the view 
 
 **If you want to get a bit more creative, you can set the amount for each direction like this:**
 
-```
+```swift
 .parallax(minHorizontal: -20, maxHorizontal: 20, minVertical: -5, maxVertical: 5)
 ```
 
