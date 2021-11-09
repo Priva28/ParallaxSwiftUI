@@ -14,7 +14,9 @@ Or you can just copy the `ParallaxSwiftUI.swift` file to your project.
 
 This is all you need to add a parallax effect to any SwiftUI view:
 
-`.parallax()`
+```swift
+.parallax()
+```
 
 Really, that's it.
 
@@ -24,27 +26,37 @@ Right now you can customise the direction the parallax occurs in, and the amount
 
 **To set the direction do this:**
 
-`.parallax(direction: .vertical)`
+```swift
+.parallax(direction: .vertical)
+```
 
 You can use `.vertical`, `.horizontal` or `.both` which is the default.
 
 **To set the amount do this:**
 
-`.parallax(amount: 20)`
+```swift
+.parallax(amount: 20)
+```
 
 The default is 10 and the amount will change the amount in pixels that the view can move in any direction.
 
 **If you want to get a bit more creative, you can set the amount for each direction like this:**
 
-`.parallax(minHorizontal: -20, maxHorizontal: 20, minVertical: -5, maxVertical: 5)`
+```
+.parallax(minHorizontal: -20, maxHorizontal: 20, minVertical: -5, maxVertical: 5)
+```
 
 This code above will make it so the view can move 20 pixels left and right and 5 up and down.
 
 **Complete examples:**
 
-`.parallax(minHorizontal: 20, maxHorizontal: -20, minVertical: 5, maxVertical: -5, direction: .both)`
+```swift
+.parallax(minHorizontal: 20, maxHorizontal: -20, minVertical: 5, maxVertical: -5, direction: .both)
+```
 
-`.parallax(amount: 22, direction: .horizontal)`
+```swift
+.parallax(amount: 22, direction: .horizontal)
+```
 
 ### *Pro tip:* If you want to invert the direction that the effect occurs in set the min values to a positive and the max values to a negative.
 
@@ -66,7 +78,7 @@ Here is a cool button I made:
 
 ![preview](https://github.com/Priva28/ParallaxSwiftUI/blob/main/preview.gif)
 
-```
+```swift
 import SwiftUI
 import ParallaxSwiftUI
 
